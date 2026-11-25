@@ -3,44 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basik Transcriber - Privacy Policy</title>
+    <title>Speech to Text Offline - Privacy Policy</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; color: #222; line-height: 1.6; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; color: #222; line-height: 1.6; }
         h1 { font-size: 1.6em; }
-        h2 { font-size: 1.2em; margin-top: 1.5em; }
+        h2 { font-size: 1.2em; margin-top: 1.8em; }
+        h3 { font-size: 1.0em; margin-top: 1.2em; }
         .updated { color: #666; font-size: 0.9em; }
+        ul { margin-top: 0.3em; }
+        code { background: #f4f4f4; padding: 1px 4px; border-radius: 3px; font-size: 0.9em; }
     </style>
 </head>
 <body>
-    <h1>Basik Transcriber - Privacy Policy</h1>
-    <p class="updated">Last updated: February 9, 2026</p>
+    <h1>Speech to Text Offline — Privacy Policy</h1>
+    <p class="updated">Last updated: November 25, 2026 · App package: <code>com.basikcode.transcriber</code></p>
 
-    <h2>Overview</h2>
-    <p>Basik Transcriber is designed with privacy as a core principle. All audio processing and transcription happens entirely on your device. No audio data ever leaves your phone.</p>
+    <h2>Summary</h2>
+    <p>Your <strong>audio recordings, audio files, and transcript text</strong> are processed entirely on your device and are never uploaded, transmitted, or shared with any server or third party. The AI models that perform transcription and AI Tools (summarize, translate, sentiment) run locally on your phone.</p>
+    <p>The app does, however, connect to Google services for three specific purposes that do not involve your audio or transcripts: serving in-app advertising, anonymous usage analytics that help us understand which features people use, and crash diagnostics that help us fix bugs. Each of these is described below in detail, along with how to opt out.</p>
 
-    <h2>Data Collection</h2>
-    <p>We do not collect, store, or transmit any personal data. Specifically:</p>
+    <h2>1. What stays on your device (always)</h2>
     <ul>
-        <li>No audio files are uploaded to any server</li>
-        <li>No transcription results are sent anywhere</li>
-        <li>No usage analytics are collected</li>
-        <li>No account or sign-in is required</li>
+        <li>The audio you record in the app, or any audio file you open or share into the app.</li>
+        <li>The transcript text produced from that audio.</li>
+        <li>Any AI Tools output (summaries, sentiment analyses, translations) generated from the transcript.</li>
+        <li>Your in-app settings, including input language preference, target translation language, and which transcription engine you prefer.</li>
+    </ul>
+    <p>None of the above is transmitted off the device by this app. Transcription is performed by an on-device AI model; the optional AI Tools also run on-device once the AI Tools model pack is downloaded.</p>
+
+    <h2>2. What the app transmits, and to whom</h2>
+
+    <h3>2.1 Google AdMob (banner advertising)</h3>
+    <p>The app displays a banner ad to support development, and a larger ad while you wait for a long transcription. When an ad loads, Google AdMob receives:</p>
+    <ul>
+        <li>Your device's advertising identifier (Android Advertising ID), unless you have disabled ad personalization in your Android system settings or denied consent in the EU consent prompt.</li>
+        <li>Coarse location (typically derived from IP address) and device locale.</li>
+        <li>Device model, OS version, screen size, app package name, and app version.</li>
+        <li>An app session identifier.</li>
+    </ul>
+    <p>AdMob does <em>not</em> receive any audio, transcript text, or AI Tools output.</p>
+    <p>See <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> and <a href="https://support.google.com/admob/answer/6128543">AdMob data practices</a>.</p>
+
+    <h3>2.2 Firebase Analytics (anonymous usage statistics)</h3>
+    <p>The app uses Firebase Analytics to record anonymous, aggregated usage events such as app opens, ad impressions, and which features are used. Events transmitted to Firebase Analytics include:</p>
+    <ul>
+        <li>An anonymous app-instance ID (Firebase pseudonymous identifier).</li>
+        <li>App version, OS version, device model, country, locale.</li>
+        <li>Event name and event parameters, for example: <code>ad_paid_impression</code> (ad revenue, currency, ad network); <code>transcription_started</code> / <code>transcription_completed</code> (how the audio came in, the engine used, the chosen and the detected language, the audio duration and processing time in seconds, the number of words and whether the text came out empty); whether a transcript was copied, shared or exported; the steps of the optional accuracy pack and AI Tools downloads; and one-time tips shown in the app. Never the audio itself, never the transcript text.</li>
+        <li>A few device properties in broad ranges: how the app was installed (for example Google Play or another store), the phone's memory (for example "4GB"), its free storage (for example "1-3GB"), and which optional model packs it holds.</li>
+    </ul>
+    <p>Firebase Analytics receives no audio, no transcript text, no file names, no file paths, and no other personally identifying content.</p>
+
+    <h3>2.3 Firebase Crashlytics (crash diagnostics)</h3>
+    <p>If the app crashes, Crashlytics transmits a crash report containing:</p>
+    <ul>
+        <li>Stack trace of the crash.</li>
+        <li>Device model, OS version, app version.</li>
+        <li>A short trail of recent log breadcrumbs (technical events the app logged before the crash, such as "model loaded" or "transcription started"). These breadcrumbs never include audio content or transcript text.</li>
+        <li>An anonymous app-instance ID.</li>
+    </ul>
+    <p>Crash reports are used solely to diagnose and fix bugs.</p>
+
+    <h3>2.4 Optional model downloads (accuracy pack, AI Tools)</h3>
+    <p>The accuracy pack (~280 MB, for languages such as Arabic, Hindi or Persian) and the AI Tools pack (~3.5 GB) are downloaded from the Google Play Store, which handles the download itself; we do not see who downloads them. When Google Play cannot deliver the accuracy pack (for example on a copy installed from another store), the app downloads the same file from our public model mirror on GitHub; like any web download, GitHub then sees your IP address. These downloads contain only model files: nothing about you or your audio is sent.</p>
+
+    <h3>2.5 Feedback you send by e-mail</h3>
+    <p>"Send Feedback" and "Report an issue with this transcription" open <em>your own</em> e-mail app with a message addressed to <a href="mailto:basikcode@gmail.com">basikcode@gmail.com</a>. The draft is prefilled with technical details (app version, device model and processor, Android version, free memory and storage, phone language and the language detected in your last recording) and, for "Report an issue", the first 500 characters of the transcript on screen, so the problem can be reproduced. You can read, change or delete any of it before sending, and nothing is sent unless you press send in your e-mail app. Messages are used only to reply to you and fix problems, and are never shared.</p>
+
+    <h2>3. Your choices and how to opt out</h2>
+
+    <h3>Personalized advertising</h3>
+    <p><strong>Android:</strong> Settings → Privacy → Ads → "Delete advertising ID" (Android 12+) or "Opt out of ads personalization" (older). After this, ads in the app will be non-personalized.</p>
+    <p><strong>European Economic Area, UK, Switzerland:</strong> When you first open the app, a consent prompt (provided by Google's User Messaging Platform) appears. You can decline personalized ads there. You can re-open this prompt anytime via the app's Settings → "Privacy choices."</p>
+
+    <h3>Usage analytics</h3>
+    <p>Usage analytics are not controlled by the consent prompt. To stop them, uninstall the app; analytics data already collected expires as described in section 6.</p>
+
+    <h3>Crash reports</h3>
+    <p>Crash reports are essential to operating a reliable app. If you wish not to send them, uninstall the app.</p>
+
+    <h2>4. Children</h2>
+    <p>The app is not directed at children under 13. The app configures AdMob to only serve "PG-rated" (family-friendly) ad content, but this is a content rating, not a children's-app declaration. We do not knowingly collect data from children under 13.</p>
+
+    <h2>5. Permissions the app requests</h2>
+    <ul>
+        <li><strong>Microphone (<code>RECORD_AUDIO</code>):</strong> only when you tap the in-app Record button. Audio is captured to a temporary file on your device and processed locally. It is never uploaded.</li>
+        <li><strong>Notifications (<code>POST_NOTIFICATIONS</code>, Android 13+):</strong> used to show transcription progress and to alert you when a transcription finishes while you're in another app.</li>
+        <li><strong>Internet (<code>INTERNET</code>):</strong> used to (a) fetch banner ads, (b) send anonymous analytics and crash reports, (c) download the optional accuracy pack and AI Tools model pack (section 2.4). Never used to upload your audio or transcripts.</li>
+        <li><strong>Foreground service (<code>FOREGROUND_SERVICE</code>):</strong> keeps the transcription model loaded and shows a progress notification while transcription or AI Tools are running. No data is transmitted by this service.</li>
     </ul>
 
-    <h2>On-Device Processing</h2>
-    <p>The AI model runs locally on your device. Audio files shared with the app are processed in memory and are not retained after the app is closed.</p>
+    <h2>6. Data retention</h2>
+    <p>Audio and transcripts remain on your device only. Firebase Analytics retention follows <a href="https://support.google.com/analytics/answer/7667196">Google's default of 14 months</a> for event-level data. Crash reports follow <a href="https://firebase.google.com/support/privacy">Firebase Crashlytics retention</a> (90 days for crash-free user metrics, 90 days for individual crash report payloads).</p>
 
-    <h2>Advertising</h2>
-    <p>The app uses Google AdMob to display banner ads. AdMob may collect device identifiers and usage data in accordance with <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>. You can opt out of personalized ads in your device settings.</p>
+    <h2>7. Third parties</h2>
+    <p>The third-party services that receive any data from this app:</p>
+    <ul>
+        <li>Google AdMob — for banner advertising.</li>
+        <li>Google Firebase Analytics — for anonymous usage statistics.</li>
+        <li>Google Firebase Crashlytics — for crash diagnostics.</li>
+        <li>Google Play Asset Delivery — for the optional accuracy pack and AI Tools downloads.</li>
+        <li>GitHub — only when Google Play cannot deliver the accuracy pack, as a plain file download (section 2.4).</li>
+    </ul>
 
-    <h2>Third-Party Services</h2>
-    <p>The only third-party service used is Google AdMob for advertising. No other third-party services receive your data.</p>
+    <h2>8. Changes to this policy</h2>
+    <p>If this policy is updated materially, the changes will be reflected on this page with an updated date and, where relevant, communicated through the app's release notes.</p>
 
-    <h2>Changes</h2>
-    <p>If this policy is updated, the changes will be reflected on this page with an updated date.</p>
-
-    <h2>Contact</h2>
-    <p>For questions about this privacy policy, contact us at <a href="mailto:basikcode@gmail.com">basikcode@gmail.com</a>.</p>
+    <h2>9. Contact</h2>
+    <p>For questions about this privacy policy, contact <a href="mailto:basikcode@gmail.com">basikcode@gmail.com</a>.</p>
 </body>
 </html>
-
